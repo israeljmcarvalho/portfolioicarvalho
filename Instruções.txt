@@ -1,0 +1,17 @@
+=============================================================
+Instruções para se conectar à aplicação
+=============================================================
+
+    Email: israel@teste.com
+password": "teste123"
+
+
+
+=============================================================
+Instruções Execução do algorítimo de Clustering
+=============================================================
+
+	       Dataset Path: \DatasetPacientes.csv
+	    Distance Method: Qualquer opção dentre as 5 disponíveis
+	     Cluster Method: Qualquer opção dentre as 4 disponíveis
+Número de Clusters (Groups): Qualquer número inteiro entre 1 e 10 (
