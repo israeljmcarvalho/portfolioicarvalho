@@ -24,7 +24,7 @@
     Como potenciais clientes deste projeto destacam se profissionais da área médica, psicologia, Terapia Ocupacional, Fonoaudiologia, dentre outras áreas onde são realizadas estudos relacionados a pacientes pertencentes ao espectro autista
 
 - Quais os problemas ou oportunidades temos para resolver?
-    Devido a falta de informações sistematizadas, os profissionais de área da saúde que cuidam de pacientes do TEA tem dificuldades de classificar seus pacientes incorrendo geralmente em ponderações arbitrárias para tal clusterização, o que é sabido ser algo plenamente impreciso. Pleiteiase criar um modelo de Machine Learning onde será utilizado o algoritmo não supervisionados chamado Custering . É fruto ainda deste trabalho criar, parametrizar, e executar este algoritmo na linguagem R.
+    Devido a falta de informações sistematizadas, os profissionais de área da saúde que cuidam de pacientes do TEA tem dificuldades de classificar seus pacientes incorrendo geralmente em ponderações arbitrárias para tal clusterização, o que é sabido ser algo plenamente impreciso. Pleiteia-se criar um modelo de Machine Learning onde será utilizado o algoritmo não supervisionado chamado Custering. É fruto ainda deste trabalho criar, parametrizar, e executar este algoritmo na linguagem R.
 
 - Qual o benefício claro que o cliente pode ter?
     É muito comum analisarmos observações dentro de um contexto (ou grupo) afim de identificarmos padrões de comportamentos dos registros observados. Na área médica, não é diferente. Hoje, médicos e demais profissionais da área da saúde agrupam pacientem com base em seu conhecimento e observações subjacentes, mas diante de dezenas (ou até centenas) de variáveis de uma paciente, é inevitável que ocorre ponderação arbitrária atribuindo valores de forma empírica (consequentemente não científica) na separação de pacientes em grupos afim de poder estudar estes pacientes sob a ótica do grupo onde está inserido. Espera se que com o resultado apresentado por este algoritmo, os profissionais da saúde tenham mais precisão ao analisar possíveis grupos de indivíduos visto que estes grupos (clusters) emergirão fruto deste poderoso algorítimo de Machine Learning, o Clustering
@@ -74,9 +74,9 @@
 
 ---
 
-### 4. Código (lib)
+### 4. Estrutura
 
-- **Bibliotecas Utilizadas:**
+- **Linguagem:**
 
   - R
     - library tidyverse
@@ -89,9 +89,27 @@
     - library reshape
     - library dplyr
 
-  - PYTHON
-    - pandas
-    - django
+- **Web:**
+
+  - NEXTJS (NodeJS + React)
+  - TAILWINDCSS
+  - AWS
+
+- **Testes:**
+  - JEST
+
+  - **Versionamento | Pipeline CI/CD:**
+  - GITHUB
+
+  - **Monitoramento:**
+  - NEW RELIC
+
+   - **Cobertura:**
+  - SONAR
+
+ - **IDEs:**
+  - RSTUDIO
+  - VSCODE
 
 ---
 
@@ -112,8 +130,8 @@
   - **Executar o Algorítimo:**
   - Executar o Algorítimo.
 
-  - **Exportar Resultado:**
-  - Exportar o Resultado em formato de planilha eletrônica xlsx.
+  - **Apresentar Resultado:**
+  - Apresentar resultado do algorítimo no browser.
 
 
 ## Caso de Uso
