@@ -207,7 +207,7 @@ export default function Form() {
 						</div>
 
 						<button className="bg-gray-600 text-white font-bold cursor-pointer px-6 py-2 rounded-[12px]">
-							RUN R
+							RUN CLUSTERING ALGORITHM
 						</button>
 						{error && (
 							<div className="bg-red-500 text-white w-fit text-sm py-1 px-3 rounded-md mt-2">
