@@ -153,10 +153,11 @@
    - **Descrição:** O usuário poderá explortar o resultado em formato excel.
 
 
-## Quadro Kambam
+## Quadro Kanban
 
-[Clique aqui para acessar o quadro Kambam](https://trello.com/invite/b/b0mpq9dW/ATTIf8882b9b47b05f4b332b943e5945413dF9714CA7/portfolio)
+[Clique aqui para acessar o quadro Kanban](https://trello.com/invite/b/b0mpq9dW/ATTIf8882b9b47b05f4b332b943e5945413dF9714CA7/portfolio)
 
 
 ## Instruções de Uso
    - **Instruções para se conectar à aplicação:** Email: israel@teste.com /password": "teste123"
+   - **Instruções Execução do algorítimo de Clustering:** Dataset Path: \DatasetPacientes.csv, Distance Method: Qualquer opção dentre as 5 disponíveis, Cluster Method: Qualquer opção dentre as 4 disponíveis e Número de Clusters (Groups): Qualquer número inteiro entre 1 e 10.
