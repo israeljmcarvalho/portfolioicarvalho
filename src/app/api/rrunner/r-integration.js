@@ -1,6 +1,6 @@
 const fs = require("fs");
 const pt = require("path");
-var child_process = require("child_process");
+const child_process = require("child_process");
 
 
 /**
@@ -12,8 +12,8 @@ var child_process = require("child_process");
  *  - "mac" -> for MacOS based Systems
  */
 const getCurrentOs = () => {
-	var processPlatform = process.platform;
-	var currentOs;
+	const processPlatform = process.platform;
+	let currentOs;
 
 	if (processPlatform === "win32") {
 		currentOs = "win";
@@ -77,7 +77,7 @@ const getCurrentOs = () => {
  * @returns {string} the path where the Rscript binary is installed, 0 otherwise
  */
 const isRscriptInstallaed = (path) => {
-	var installationDir = 0;
+	let installationDir = 0;
 
 	switch (getCurrentOs()) {
 		case "win":
@@ -132,8 +132,8 @@ const executeRCommand = (command, RBinariesLocation) => {
 	let output = 0;
 
 	if (RscriptBinaryPath) {
-		var commandToExecute = `"${RscriptBinaryPath}" -e "${command}"`;
-		var commandResult = executeShellCommand(commandToExecute);
+		const commandToExecute = `"${RscriptBinaryPath}" -e "${command}"`;
+		const commandResult = executeShellCommand(commandToExecute);
 
 		if (commandResult.stdout) {
 			output = commandResult.stdout;
@@ -163,7 +163,7 @@ const executeRCommandAsync = (command, RBinariesLocation) => {
 		let output = 0;
 
 		if (RscriptBinaryPath) {
-			var commandToExecute = `"${RscriptBinaryPath}" -e "${command}"`;
+			const commandToExecute = `"${RscriptBinaryPath}" -e "${command}"`;
 			executeShellCommandAsync(commandToExecute).then((output) => {
 				output = filterMultiline(output);
 				resolve(output);
@@ -200,8 +200,8 @@ const executeRScript = (fileLocation, RBinariesLocation) => {
 	}
 
 	if (RscriptBinaryPath) {
-		var commandToExecute = `"${RscriptBinaryPath}" "${fileLocation}"`;
-		var commandResult = executeShellCommand(commandToExecute);
+		const commandToExecute = `"${RscriptBinaryPath}" "${fileLocation}"`;
+		const commandResult = executeShellCommand(commandToExecute);
 
 		if (commandResult.stdout) {
 			output = commandResult.stdout;
@@ -222,7 +222,7 @@ const executeRScript = (fileLocation, RBinariesLocation) => {
  * Formats the parameters so R could read them
  */
 const convertParamsArray = (params) => {
-	var methodSyntax = ``;
+	let methodSyntax = ``;
 
 	if (Array.isArray(params)) {
 		methodSyntax += "c(";
@@ -261,7 +261,7 @@ const callMethod = (fileLocation, methodName, params, RBinariesLocation) => {
 		throw Error("ERROR: please provide valid parameters - methodName, fileLocation and params cannot be null");
 	}
 
-	var methodSyntax = `${methodName}(`;
+	let methodSyntax = `${methodName}(`;
 
 	// check if params is an array of parameters or an object
 	if (Array.isArray(params)) {
@@ -280,7 +280,7 @@ const callMethod = (fileLocation, methodName, params, RBinariesLocation) => {
 		}
 	}
 
-	var methodSyntax = methodSyntax.slice(0, -1);
+	methodSyntax = methodSyntax.slice(0, -1);
 	methodSyntax += ")";
 
 	output = executeRCommand(`source('${fileLocation}') ; print(${methodSyntax})`, RBinariesLocation);
@@ -304,7 +304,7 @@ const callMethodAsync = (fileLocation, methodName, params, RBinariesLocation) =>
 			throw Error("ERROR: please provide valid parameters - methodName, fileLocation and params cannot be null");
 		}
 
-		var methodSyntax = `${methodName}(`;
+		let methodSyntax = `${methodName}(`;
 
 		// check if params is an array of parameters or an object
 		if (Array.isArray(params)) {
@@ -323,7 +323,7 @@ const callMethodAsync = (fileLocation, methodName, params, RBinariesLocation) =>
 			}
 		}
 
-		var methodSyntax = methodSyntax.slice(0, -1);
+		methodSyntax = methodSyntax.slice(0, -1);
 		methodSyntax += ")";
 
 		executeRCommandAsync(`source('${fileLocation}') ; print(${methodSyntax})`, RBinariesLocation).then((res) => {
@@ -351,7 +351,7 @@ const callStandardMethod = (methodName, params, RBinariesLocation) => {
 		throw Error("ERROR: please provide valid parameters - methodName and params cannot be null");
 	}
 
-	var methodSyntax = `${methodName}(`;
+	let methodSyntax = `${methodName}(`;
 
 	// check if params is an array of parameters or an object
 	if (Array.isArray(params)) {
@@ -370,7 +370,7 @@ const callStandardMethod = (methodName, params, RBinariesLocation) => {
 		}
 	}
 
-	var methodSyntax = methodSyntax.slice(0, -1);
+	methodSyntax = methodSyntax.slice(0, -1);
 	methodSyntax += ")";
 
 	output = executeRCommand(`print(${methodSyntax})`, RBinariesLocation);
@@ -391,7 +391,7 @@ const filterMultiline = (commandResult) => {
 
 	// remove last newline to avoid empty results
 	// NOTE: windows newline is composed by \r\n, GNU/Linux and Mac OS newline is \n
-	var currentOS = getCurrentOs();
+	const currentOS = getCurrentOs();
 
 	commandResult = commandResult.replace(/\[\d+\] /g, "");
 

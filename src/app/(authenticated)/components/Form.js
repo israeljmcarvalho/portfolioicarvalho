@@ -141,7 +141,7 @@ export default function Form() {
 			return;
 		}
 
-		var data = new FormData();
+		let data = new FormData();
 		data.append('files', csv, csv.name)
 		data.append('clustermethod', clustermethod);
 		data.append('distancesmethod', distancesmethod);
@@ -155,7 +155,7 @@ export default function Form() {
 				body: data,
 				'Content-Type': 'multipart/form-data;'
 			})).json();
-			console.log('ESTOY AQUI:::: ', output_media);
+
 			setOutputall(output_all);
 			setOutputmedia(output_media);
 			setOutputsd(output_sd);
@@ -177,11 +177,11 @@ export default function Form() {
 					<form onSubmit={handleSubmit} className="flex flex-col gap-3">
 						<div className="flex flex-col gap-3">
 							<label htmlFor="">CSV File</label>
-							<input onChange={(e) => setCsv(e.target.files[0])} type="file" required className="rounded-md bg-white p-3 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300"/>
+							<input alt="CSV file" onChange={(e) => setCsv(e.target.files[0])} type="file" required className="rounded-md bg-white p-3 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300"/>
 						</div>
 						<div className="flex flex-col gap-3">
 							<label htmlFor="">Distances Method</label>
-							<select id="lang" onChange={(e) => setDistancesMethod(e.target.value)} value={distancesmethod} required className="rounded-md bg-white p-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300">
+							<select data-testid="Distances-Method" onChange={(e) => setDistancesMethod(e.target.value)} value={distancesmethod} required className="rounded-md bg-white p-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300">
 								<option value=""></option>
 								<option value="euclidean">Euclidean Distance</option>
 								<option value="maximum">Maximum Distance</option>
@@ -193,7 +193,7 @@ export default function Form() {
 						</div>
 						<div className="flex flex-col gap-3">
 							<label htmlFor="">Cluster Method</label>
-							<select id="lang" onChange={(e) => setClusterMethod(e.target.value)} value={clustermethod} required className="rounded-md bg-white p-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300">
+							<select data-testid="Cluster-Method" onChange={(e) => setClusterMethod(e.target.value)} value={clustermethod} required className="rounded-md bg-white p-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300">
 								<option value=""></option>
 								<option value="complete">Complete Linkage</option>
 								<option value="single">Single Linkage</option>
@@ -203,7 +203,7 @@ export default function Form() {
 						</div>
 						<div className="flex flex-col gap-3">
 							<label htmlFor="">Groups</label>
-							<input onChange={(e) => setGroups(e.target.value)} value={groups} type="number" min="1" max="10" required className="rounded-md bg-white p-3 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300"/>
+							<input alt="Groups" onChange={(e) => setGroups(e.target.value)} value={groups} type="number" min="1" max="10" required className="rounded-md bg-white p-3 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300"/>
 						</div>
 
 						<button className="bg-gray-600 text-white font-bold cursor-pointer px-6 py-2 rounded-[12px]">
