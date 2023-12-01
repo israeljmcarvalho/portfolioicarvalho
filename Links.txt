@@ -1,0 +1,4 @@
+https://github.com/israeljmcarvalho/portfolioicarvalho
+https://sonarcloud.io/summary/overall?id=israeljmcarvalho_portfolioicarvalho
+http://54.233.191.133:3000/
+https://one.newrelic.com/nr1-core/infra-summary/host/NDI2MjkxMHxJTkZSQXxOQXw4NjU3MjM1MDY5Njg5NjY0NzU?account=4262910&duration=1800000&state=8065c332-0fb3-0d91-4f92-19c3578982b7
