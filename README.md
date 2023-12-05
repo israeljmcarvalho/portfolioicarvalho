@@ -98,16 +98,16 @@
 - **Testes:**
   - JEST
 
-  - **Versionamento | Pipeline CI/CD:**
+- **Versionamento | Pipeline CI/CD:**
   - GITHUB
 
-  - **Monitoramento:**
+- **Monitoramento:**
   - NEW RELIC
 
-   - **Cobertura:**
+- **Cobertura:**
   - SONAR
 
- - **IDEs:**
+- **IDEs:**
   - RSTUDIO
   - VSCODE
 
