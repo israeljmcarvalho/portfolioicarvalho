@@ -15,6 +15,7 @@
 .next
 /out/
 /uploads
+/ignore
 
 # production
 /build
