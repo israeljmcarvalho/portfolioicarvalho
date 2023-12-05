@@ -1,3 +1,5 @@
+// Arquivo configuração do Next
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	eslint: {

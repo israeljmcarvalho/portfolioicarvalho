@@ -11,7 +11,7 @@ jest.mock("next/navigation", () => ({
 	}
 }));
 
-
+// Verifica se todos os campos do login foram renderizados na tela
 describe('LoginForm', () => {
 	it('renders a heading', () => {
 		const { container } = render(<LoginForm />);

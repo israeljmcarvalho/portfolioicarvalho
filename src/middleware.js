@@ -17,6 +17,7 @@ export default withAuth(
 	}
 )
 
+// Rotas do backend que precisam de autenticação
 export const config = {
 	matcher: '/api/rrunner/:path*',
 }

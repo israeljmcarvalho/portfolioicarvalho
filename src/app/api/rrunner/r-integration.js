@@ -1,7 +1,8 @@
+//Lib do Node para rodar R
+
 const fs = require("fs");
 const pt = require("path");
 const child_process = require("child_process");
-
 
 /**
  * get the current Operating System name

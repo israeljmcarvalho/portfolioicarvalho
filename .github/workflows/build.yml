@@ -1,4 +1,7 @@
-name: Build
+#Git CI/CD
+#Script documentação Sonar
+
+name: Build 
 on:
  push:
    branches:
