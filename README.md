@@ -74,7 +74,7 @@
 
 ---
 
-### 4. Estrutura
+### 4. Tecnologias aplicadas
 
 - **Linguagem:**
 
